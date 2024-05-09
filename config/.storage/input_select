@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "input_select",
+  "data": {
+    "items": [
+      {
+        "id": "dropdown_helper",
+        "options": [
+          "Motion Detect",
+          "Face Detect",
+          "Emotion Detect"
+        ],
+        "name": "video_options_helper"
+      },
+      {
+        "id": "frame_helper",
+        "name": "frame helper",
+        "options": [
+          "6 FPS",
+          "12 FPS",
+          "18 FPS",
+          "24 FPS"
+        ]
+      },
+      {
+        "id": "resolutions",
+        "name": "resolutions helper",
+        "options": [
+          "426 x 240 (or 240p)",
+          "640 x 360 (or 360p)",
+          "854 x 480 (or 480p)",
+          "1280 x 720 (or 720p)"
+        ]
+      }
+    ]
+  }
+}

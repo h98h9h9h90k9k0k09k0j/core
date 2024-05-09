@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.p6_project",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "path": "home",
+          "cards": [
+            {
+              "type": "markdown",
+              "content": "**P6 Distributed Systems Project**\nThis dashboard has been created as a part of a university project, allowing Home Assistant users to distribute their devices and control them from a hub-device, perhaps this machine.\nFeatures includes linking to external docker environments, setting up custom location, restarting Home Assistant to enable configurations and streaming on demand of one(1) device so far.",
+              "title": "Explanation"
+            },
+            {
+              "show_name": true,
+              "show_icon": true,
+              "type": "button",
+              "tap_action": {
+                "action": "call-service",
+                "service": "homeassistant.restart",
+                "target": {}
+              },
+              "entity": "input_button.button_helper",
+              "name": "Restart Home Assistant",
+              "icon": "mdi:restart",
+              "icon_height": "40px"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "input_text.text_helper_1",
+                      "name": "Enter External Docker Location",
+                      "icon": "empty"
+                    }
+                  ],
+                  "title": "Configuration of location"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "call-service",
+                    "service": "python_script.hello_world",
+                    "data": {
+                      "name": "{{ states('input_text.text_helper_1') }}"
+                    },
+                    "target": {}
+                  },
+                  "entity": "input_button.button_helper",
+                  "name": "Check/Update",
+                  "icon": "empty",
+                  "icon_height": "0px"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_select.dropdown_helper"
+                },
+                {
+                  "entity": "input_select.frame_helper"
+                },
+                {
+                  "entity": "input_select.resolutions"
+                }
+              ],
+              "title": "Video Options"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "input_text.text_helper_2",
+                      "name": "Enter Location",
+                      "icon": "empty"
+                    }
+                  ],
+                  "title": "Link External Docker"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "call-service",
+                    "service": "python_script.hello_world",
+                    "data": {
+                      "name": "Chris"
+                    },
+                    "target": {}
+                  },
+                  "entity": "input_button.button_helper",
+                  "name": "Check/Update",
+                  "icon": "empty",
+                  "icon_height": "0px"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "P6 Project"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_dashboards",
+  "data": {
+    "items": [
+      {
+        "id": "map",
+        "icon": "mdi:map",
+        "title": "Map",
+        "url_path": "map",
+        "mode": "storage",
+        "require_admin": false,
+        "show_in_sidebar": true
+      },
+      {
+        "id": "p6_project",
+        "show_in_sidebar": true,
+        "icon": "mdi:account-group",
+        "title": "P6 Project",
+        "require_admin": false,
+        "mode": "storage",
+        "url_path": "p6-project"
+      }
+    ]
+  }
+}

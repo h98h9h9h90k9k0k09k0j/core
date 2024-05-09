@@ -1,0 +1,5 @@
+message_test:
+  alias: "Message: Test"
+  sequence:
+    - service: homeassistant.restart
+  mode: single
